@@ -14,7 +14,6 @@
 /*===================================================================*\   
 |                             BOARD LEVEL                             |
 \*===================================================================*/
-
 // Board---------------+ Arduino Mega or Mega 2560
 // Processor-----------+ ATmega2560 (Mega 2560)
 // Programmer----------+ AVRISP mkll
@@ -22,7 +21,7 @@
 // Input Pins----------+ 9-10                                         
                                                                      /*
      7 seg display          7 Seg Common Anode Output
-                               A  B  C  D  E  F  G   hex
+                            A  B  C  D  E  F  G   hex
           A                 0: 0, 0, 0, 0, 0, 0, 1   0x2
       +--------+            1: 1, 0, 0, 1, 1, 1, 1   0x9E
       |        |            2: 0, 0, 1, 0, 0, 1, 0   0x24
@@ -46,10 +45,10 @@
 #define RESET 11             // Pin tied to RESET
 
 // Game Configuration
-#define BUTTON_HOLD_MS 3000     // Button hold threshold to reset game
-#define SCORE_BLINK_MS 500      // Length of time between winning score blinks
-#define BUTTON_PRESS_LENGTH 200 // Approx. length of time of a button press
-#define UP_TO_SCORE 21          // Score to play up to
+#define BUTTON_HOLD_MS 3000      // Button hold threshold to reset game
+#define SCORE_BLINK_MS 500       // Length of time between winning score blinks
+#define BUTTON_PRESS_LENGTH 200  // Approx. length of time of a button press
+#define UP_TO_SCORE 21           // Score to play up to
 
 // 7 Segment Configuration
 #define SEVEN_SEGMENTS 7     // # of segments used
@@ -99,7 +98,7 @@ bool p1_is_winner; // TRUE = Player 1 has won, FALSE = Player 2 has won
 byte displayLEDs[NUM_DIGITS][SEVEN_SEGMENTS] = 
 {
     {ON, ON, ON, ON, ON, ON, OFF},    // 0
-    {OFF, ON, ON, ON, ON, ON, OFF},   // 1
+    {OFF, ON, ON, OFF, OFF, OFF, OFF},// 1
     {ON, ON, OFF, ON, ON, OFF, ON},   // 2
     {ON, ON, ON, ON, OFF, OFF, ON},   // 3
     {OFF, ON, ON, OFF, OFF, ON, ON},  // 4
