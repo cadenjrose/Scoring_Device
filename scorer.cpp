@@ -46,10 +46,10 @@
 #define RESET 11             // Pin tied to RESET
 
 // Game Configuration
-#define BUTTON_HOLD_MS 3000  // Button hold threshold to reset game
-#define SCORE_BLINK_MS 500   // Length of time between winning score blinks
-#define BUTTON_PRESS_LENGTH  // Approx. length of time of a button press
-#define UP_TO_SCORE 21       // Score to play up to
+#define BUTTON_HOLD_MS 3000     // Button hold threshold to reset game
+#define SCORE_BLINK_MS 500      // Length of time between winning score blinks
+#define BUTTON_PRESS_LENGTH 200 // Approx. length of time of a button press
+#define UP_TO_SCORE 21          // Score to play up to
 
 // 7 Segment Configuration
 #define SEVEN_SEGMENTS 7     // # of segments used
