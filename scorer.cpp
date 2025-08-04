@@ -4,7 +4,7 @@
 
 // Filename------------+ scorer.cpp
 // Date Created--------+ 8/2/2025
-// Date Last Modified--+ 8/2/2025
+// Date Last Modified--+ 8/4/2025
 // Description---------+ Controls four 7-segment displays used to display scores
 // --------------------- for 2 players (2 button inputs) (7 segs are comm. Anode)
 // Features------------+ Score incrementing, winning conditions (up to 21 win by
