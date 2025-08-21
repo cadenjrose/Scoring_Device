@@ -4,7 +4,7 @@
 
 // Filename------------+ scorer.cpp
 // Date Created--------+ 8/2/2025
-// Date Last Modified--+ 8/4/2025
+// Date Last Modified--+ 8/20/2025
 // Description---------+ Controls four 7-segment displays used to display scores
 // --------------------- for 2 players (2 button inputs) (7 segs are comm. Anode)
 // Features------------+ Score incrementing, winning conditions (up to 21 win by
@@ -22,7 +22,7 @@
 // Input Pins----------+ 9-10                                         
                                                                      /*
      7 seg display          7 Seg Common Anode Output
-                            A  B  C  D  E  F  G   hex
+                               A  B  C  D  E  F  G   hex
           A                 0: 0, 0, 0, 0, 0, 0, 1   0x2
       +--------+            1: 1, 0, 0, 1, 1, 1, 1   0x9E
       |        |            2: 0, 0, 1, 0, 0, 1, 0   0x24
@@ -57,11 +57,11 @@
 #define COMMON_ANODE         // Define Common Anode as 7 Segment Type
 
 // Common Type
-#ifdef COMMON_ANODE
+#ifdef COMMON_ANODE     // Active low
 #define ON LOW
 #define OFF HIGH
-#else
-#define ON HIGH
+#else // COMMON_CATHODE // Active high
+#define ON HIGH 
 #define OFF LOW
 #endif
 
@@ -93,8 +93,7 @@ bool winner_found; // Winner found flag
 bool p1_is_winner; // TRUE = Player 1 has won, FALSE = Player 2 has won
 
 /*
- * Segment level values to display digits 
- * ( COMMON ANODE )
+ * Segment level values to display digits
 */
 byte displayLEDs[NUM_DIGITS][SEVEN_SEGMENTS] = 
 {
